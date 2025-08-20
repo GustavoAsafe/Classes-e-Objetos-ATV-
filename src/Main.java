@@ -1,12 +1,15 @@
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
-        //Criar objetos
-        Produto fone = new Produto( "Fone", "10,00");
+        ArrayList<Funcionario> funcionarios = new ArrayList<>();
 
-        Pedido pedido = new Pedido();
-        pedido.adicionarProduto(fone);
+        funcionarios.add(new Funcionario("Gustavo", 5000));
+        funcionarios.add(new Gerente("José", 2000));
+        funcionarios.add(new Vendedor("Jorge", 1500));
 
-
-        pedido.mostrarPedido();
+        for (Funcionario f : funcionarios) {
+            System.out.println(f.getInfo());
+        }
     }
 }
